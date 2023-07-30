@@ -1,0 +1,27 @@
+.medialink {
+
+    margin: 15px;
+}
+
+.contactlink {
+
+    margin: 15px;
+}
+
+#all {
+    margin-top: 200px;
+}
+
+#foto {
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+#links {
+    margin-right: auto;
+    max-width: 996px;
+}
+
+#contact {
+    flex-wrap: wrap;
+}
