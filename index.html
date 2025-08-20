@@ -4,10 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEHMET EMİR KARAKURT</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="newimg/meklogo.png" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        /* CSS KODU BURADAN BAŞLAR */
+
+        /* Genel Ayarlar */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Linkler için altı çizili efekti kaldırıldı */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Her iki görünüm de başlangıçta gizli */
+        .desktop-view,
+        .mobile-view {
+            display: none;
+        }
+
+        /* Masaüstü Görünümü (varsayılan) */
+        @media (min-width: 769px) {
+            .desktop-view {
+                display: flex; /* Masaüstü boyutta göster */
+            }
+
+            .container {
+                width: 90%;
+                max-width: 1200px;
+                background-image: linear-gradient(135deg, #4b5a6c 0%, #2a333d 100%);
+                border-radius: 20px;
+                padding: 40px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            }
+            
+            .main-content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            .left-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-right: 50px;
+            }
+            
+            .profile-image {
+                width: 250px;
+                height: 250px;
+                border-radius: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            
+            .name {
+                color: #fff;
+                font-size: 1.8em;
+                font-weight: 600;
+                margin-top: 20px;
+                letter-spacing: 1.5px;
+            }
+            
+            .right-section {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .contact-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .contact-item {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                padding: 15px 25px;
+                color: #fff;
+                font-size: 1em;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease;
+            }
+            
+            .contact-item:hover {
+                transform: translateY(-5px);
+            }
+
+            /* İkon boyutları sadece masaüstünde geçerli */
+            .icon {
+                width: 24px;
+                height: 24px;
+                margin-right: 15px;
+                object-fit: contain; 
+            }
+        }
+
+        /* Mobil Görünüm */
+        @media (max-width: 768px) {
+            .mobile-view {
+                display: flex; /* Mobil boyutta göster */
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: 350px;
+                padding: 0;
+                background: none;
+                box-shadow: none;
+            }
+
+            .profile-info-mobile {
+                width: 100%;
+                background-image: linear-gradient(135deg, #4b5a6c 0%, #2a333d 100%);
+                border-radius: 20px;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            
+            .profile-image-mobile {
+                width: 150px;
+                height: 150px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            
+            .name-mobile {
+                color: #fff;
+                font-size: 1.4em;
+                font-weight: 600;
+                margin-top: 15px;
+            }
+            
+            .contact-list-mobile {
+                width: 100%;
+                background-image: linear-gradient(135deg, #4b5a6c 0%, #2a333d 100%);
+                border-radius: 20px;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .contact-item-mobile {
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                border-radius: 15px;
+                display: flex;
+                align-items: center;
+                padding: 15px 25px;
+                color: #fff;
+                font-size: 0.9em;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            /* Mobil görünümdeki ikon boyutları ayarlandı */
+            .contact-item-mobile .icon {
+                width: 20px;
+                height: 20px;
+                margin-right: 15px;
+                object-fit: contain;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -85,4 +265,3 @@
     </main>
 </body>
 </html>
-
